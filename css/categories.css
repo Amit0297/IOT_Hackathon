@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(0,0,20);
+}
+
+.cat1,.cat2,.cat3,.cat4{
+    font-family : 'Press Start 2P', cursive;
+    color: white;
+    
+}
+.row{
+    margin: 4vh;
+}
+.cat1{
+    text-align: center;
+}
+.cat2{
+    text-align: center;
+}
+.cat3{
+    text-align: center;
+    
+}
+.cat4{
+    text-align: center;
+}
+.front{
+    transform: perspective(400px) rotateY(0deg);
+    transition: transform 1s linear;
+    backface-visibility: hidden;
+}
+.back{
+    transform: perspective(200px) rotateY(180deg);
+    transition: transform 1s linear;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+}
+.cat1:hover>.front,.cat2:hover>.front,.cat3:hover>.front,.cat4:hover>.front{
+    transform: rotateY(-180deg);
+}
+.cat1:hover>.back,.cat2:hover>.back,.cat3:hover>.back,.cat4:hover>.back{
+    transform: rotateY(0deg);
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -0.5; 
+}
